@@ -1,7 +1,7 @@
 const Credentials = () => {
 	return {
-		ClientId: "ENTER YOUR CLIENT ID",
-		ClientSecret: "ENTER YOUR CLIENT SECRET",
+		ClientId: process.env.REACT_APP_CLIENT_ID,
+		ClientSecret: process.env.REACT_APP_CLIENT_SECRET,
 	};
 };
 
