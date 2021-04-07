@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Credentials } from "./components/credentials";
 import "./App.css";
-import Dropdown from "./components/dropdown";
+import Dropdown from "./components/Dropdown";
 import axios from "axios";
-import Listbox from "./components/listbox";
-import Details from "./components/detail";
+import Listbox from "./components/Listbox";
+import Details from "./components/Detail";
 
 function App() {
 	const spotify = Credentials();
@@ -96,6 +96,7 @@ function App() {
 		const currentTracks = [...tracks.listOfTracks];
 		const trackInfo = currentTracks.filter((t) => t.track.id === val);
 		console.log("trackInfo", trackInfo);
+		console.log(trackInfo[0].track.external_urls.spotify)
 		setTrackDetail(trackInfo[0].track);
 	};
 
