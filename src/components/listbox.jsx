@@ -3,6 +3,7 @@ import React from "react";
 const Listbox = (props) => {
 	const click = (e) => {
 		e.preventDefault();
+    props.clicked(e.target.id)
 	};
 	return (
 		<div>

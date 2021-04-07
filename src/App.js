@@ -4,6 +4,7 @@ import "./App.css";
 import Dropdown from "./components/dropdown";
 import axios from "axios";
 import Listbox from "./components/listbox";
+import Details from "./components/detail";
 
 function App() {
 	const spotify = Credentials();
@@ -113,6 +114,7 @@ function App() {
 				/>
 				<button type="submit">Search</button>
 				<Listbox items={tracks.listOfTracks} clicked={listBoxClicked} />
+				{trackDetail && <Details {...trackDetail} /> }
 			</div>
 		</form>
 	);
