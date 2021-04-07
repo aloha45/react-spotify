@@ -12,7 +12,7 @@ const Dropdown = (props) => {
 				value={props.selectedValue}
 				onChange={dropdownChange}>
 				{props.options.map((item, idx) => (
-					<option key={idx} value={item.value}>
+					<option key={idx} value={item.id}>
 						{item.name}
 					</option>
 				))}
