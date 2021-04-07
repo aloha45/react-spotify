@@ -96,11 +96,13 @@ function App() {
 		const currentTracks = [...tracks.listOfTracks];
 		const trackInfo = currentTracks.filter((t) => t.track.id === val);
 		console.log("trackInfo", trackInfo);
-		console.log(trackInfo[0].track.external_urls.spotify)
+		console.log(trackInfo[0].track.external_urls.spotify);
 		setTrackDetail(trackInfo[0].track);
 	};
 
 	return (
+		<>
+		<h1>Playlist Genre Search</h1>
 		<form onSubmit={handleSubmit}>
 			<div className="container">
 				<Dropdown
@@ -114,10 +116,13 @@ function App() {
 					changed={playlistChanged}
 				/>
 				<button type="submit">Search</button>
+			</div>
+			<div className="list-container">
 				<Listbox items={tracks.listOfTracks} clicked={listBoxClicked} />
-				{trackDetail && <Details {...trackDetail} /> }
+				{trackDetail && <Details {...trackDetail} />}
 			</div>
 		</form>
+		</>
 	);
 }
 
